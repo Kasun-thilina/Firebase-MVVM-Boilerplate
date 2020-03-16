@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kasuncreations.boilerplate.presentation.auth.AuthViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:onClick="hideKeyBoard">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/colorWhite" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:fitsSystemWindows="true"
+            android:fillViewport="true"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="hideKeyBoard">
+
+                <EditText
+                    android:id="@+id/et_sign_up_first_name"
+                    style="@style/editTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="24dp"
+                    android:drawableStart="@drawable/ic_username"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:hint="@string/label_first_name"
+                    android:inputType="textPersonName"
+                    android:text="@={viewModel.firstName}"
+                    app:layout_constraintEnd_toStartOf="@+id/et_sign_up_last_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <EditText
+                    android:id="@+id/et_sign_up_last_name"
+                    style="@style/editTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:drawableStart="@drawable/ic_username"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:hint="@string/label_last_name"
+                    android:inputType="textPersonName"
+                    android:text="@={viewModel.lastName}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/et_sign_up_first_name"
+                    app:layout_constraintTop_toTopOf="@id/et_sign_up_first_name" />
+
+                <EditText
+                    android:id="@+id/et_sign_up_user_email"
+                    style="@style/editTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="24dp"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:hint="@string/label_email"
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModel.email}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_sign_up_first_name" />
+
+                <EditText
+                    android:id="@+id/et_sign_up_user_password"
+                    style="@style/editTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="24dp"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:hint="@string/label_password"
+                    android:inputType="textPassword"
+                    android:text="@={viewModel.password}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_sign_up_user_email" />
+
+                <EditText
+                    android:id="@+id/et_sign_up_user_confirm_password"
+                    style="@style/editTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:hint="@string/label_confirm_pwd"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_sign_up_user_password" />
+
+                <Button
+                    android:id="@+id/btn_signup"
+                    style="@style/PrimaryButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="onSignUp"
+                    android:text="@string/label_sign_up"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_sign_up_user_confirm_password" />
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="50dp"
+                    android:text="@string/label_already_account"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_sign_in"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_signup" />
+
+                <TextView
+                    android:id="@+id/tv_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:onClick="@{(v)->viewModel.goToLogin(v)}"
+                    android:text="@string/label_sign_in"
+                    android:textColor="@color/colorPurple"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_account"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_account"
+                    app:layout_constraintTop_toTopOf="@+id/tv_account" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

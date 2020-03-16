@@ -1,0 +1,26 @@
+<resources>
+
+    <!--    radious values-->
+    <dimen name="et_round_corner_radius">100dp</dimen>
+    <dimen name="et_square_corner_radius">5dp</dimen>
+    <dimen name="btn_corner_radios">100dp</dimen>
+
+
+    <!--    width values-->
+    <dimen name="cl_dialog_container_min_width">300dp</dimen>
+    <dimen name="btn_border_width">1dp</dimen>
+
+
+    <!--    margin values-->
+    <dimen name="dialogInfoMessageTextView_margin_top">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!--    padding values-->
+    <dimen name="cl_dialog_container_padding">16dp</dimen>
+
+    <!--    elevation values-->
+    <dimen name="cl_dialog_container_elevation">8dp</dimen>
+
+
+</resources>

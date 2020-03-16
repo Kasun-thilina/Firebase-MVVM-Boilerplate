@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Kasun Creations(Boilerplate)</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_add_post">New Post</string>
+    <string name="menu_map">Map</string>
+    <string name="menu_chat">Chat</string>
+
+    <string name="label_sign_up">Sign Up</string>
+    <string name="label_sign_out">Sign Out</string>
+
+
+    <string name="label_login_to_account">Login to account</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_q_forgot_password">Forgot Password?</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_don_t_have_an_account">Don\'t have an account?</string>
+    <string name="label_first_name">First Name</string>
+    <string name="label_last_name">Last Name</string>
+    <string name="label_confirm_pwd">Confirm Password</string>
+    <string name="label_already_account">Already have an account?</string>
+
+    <string name="msg_sign_out">Are you sure you want to sign out?</string>
+
+
+</resources>
